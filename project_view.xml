@@ -8,7 +8,7 @@
 				<xpath expr = "/form/sheet/h1" position = "before" >
 				<h1>
 					<field name="sequence1" class="oe_inline"  string="Seq" readonly="1" />
-					<button name="seq2existing" string="Update seq" type="object" class = "oe_highlight"/>
+				<!--	<button name="seq2existing" string="Update seq" type="object" class = "oe_highlight"/> -->
 				</h1>
 				</xpath>
             </field>

@@ -18,20 +18,6 @@ class project_task(osv.osv):
                 self.write(cr,uid,id,vals,context)
         return True
     
-    def name_get(self, cr, uid, ids, context=None):
-#         print "========================================name_get ids",ids
-        l = super(project_task,self).name_get(cr, uid, ids, context=None)
-#         print "================================l",l
-        p_task =self.pool.get("project.task")
-        final_dict = []
-        for i in l:
-#             print "iiiiiiiiiiiiiii----------------------------",i
-            result = p_task.read(cr,uid,i[0],['sequence1'],context)
-#             print "^^^^^^^^^^^^^^^^^^ result in name get",result
-            if result.get('sequence1',False):
-                final_dict.append((i[0],str(i[1])+'['+str(result.get('sequence1',"not-available"))+']'))
-        print "final_dict in name_get=====================================l",final_dict
-        return final_dict        
      
     _defaults={
                'sequence1':'/',
