@@ -1,0 +1,19 @@
+<openerp>
+	<data>
+	        <record id="task_name_in_invoice" model="ir.ui.view">
+	            <field name="name">sale.order</field>
+	            <field name="model">sale.order</field>
+	            <field name="inherit_id" ref="sale.view_order_form" />
+	            <field name="arch" type="xml">
+					<xpath expr = "/form/sheet/group/group/field[@name='date_order']" position = "before" >
+						<field name="associated_tasks">
+							<tree>
+								<field name="sequence1"/>
+								<field name="name"/>
+							</tree>
+						</field>
+					</xpath>
+				</field>
+			</record>
+		</data>
+</openerp>

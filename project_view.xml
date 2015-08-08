@@ -1,0 +1,31 @@
+<openerp>
+	<data>
+        <record id="create_project_task_seq" model="ir.ui.view">
+            <field name="name">project.task</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="arch" type="xml">
+				<xpath expr = "/form/sheet/h1" position = "before" >
+				<h1>
+					<field name="sequence1" class="oe_inline"  string="Seq" readonly="1" />
+					<button name="seq2existing" string="Update seq" type="object" class = "oe_highlight"/>
+				</h1>
+				</xpath>
+            </field>
+       </record>
+       
+       <record id="display_kanban_project_task_seq" model="ir.ui.view">
+            <field name="name">project.task</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban" />
+            <field name="arch" type="xml">
+				<xpath expr = "/kanban/templates/t/div/div/div/b/field[@name='name']" position = "before" >
+					<div><b><field name="sequence1" readonly="1" /></b></div>
+				</xpath>
+            </field>
+       </record>
+       
+       
+       
+	</data>
+</openerp>
