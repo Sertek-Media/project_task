@@ -27,7 +27,7 @@
     'summary': 'Project Task',
     'description': """
     """,
-    'author': 'Manjiri',
+    'author': 'J & G Infosystems',
     'website': '',
     'depends': ['base','project_management','sale'],
     'data': ['sequence.xml','project_view.xml','sale_order.xml'],
