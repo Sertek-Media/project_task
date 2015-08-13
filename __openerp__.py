@@ -29,7 +29,7 @@
     """,
     'author': 'J & G Infosystems',
     'website': '',
-    'depends': ['base','project_management','sale','report_aeroo'],
+    'depends': ['base','project_management','sale'],
     'data': ['sequence.xml','project_view.xml','sale_order.xml'],
     'demo': [],
     'test': [],
